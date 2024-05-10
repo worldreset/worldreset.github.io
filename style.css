@@ -308,6 +308,11 @@ img {
   }
 
 
+@media only screen and (max-width: 1026px) {
+    #hideWhenSmall {
+        display: none;
+    }
+}
 
 
 
@@ -322,21 +327,4 @@ img {
     height: 400px;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @media only screen and (max-width: 1026px) {
-    #hideWhenSmall {
-        display: none;
-    }
-}
+  
