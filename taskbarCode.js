@@ -1,8 +1,6 @@
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function dropdownClicked() {
-
-  //document.getElementById("myDropdown").classList.toggle("show");
   myDropdown.classList.add('show');
 
   if (myDropdown.innerHTML === "EXTRAS ä"){
@@ -45,7 +43,6 @@ function explode() {
   setTimeout(function() {
     const image = document.getElementById('catAnimation');
     image.src = 'mainImages/explode.gif';
-    /*document.getElementById("catAnimation").style.width = "15%";*/
   }, 400);
 
   setTimeout(function() {
