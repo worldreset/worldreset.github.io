@@ -313,19 +313,7 @@ img {
 
 
 
-  /* BLOG */
   
-  .blogPreviewContainer {
-    background-color: blue;
-    max-width: 100%;
-    max-height: 400px;
-    height: 400px;
-  }
-
-
-
-
-
 
 
 
@@ -339,4 +327,91 @@ img {
     #hideWhenSmall {
         display: none;
     }
+}
+
+/* BLOG */
+  
+.blogPreviewContainer {
+  background-color: white;
+  /* max-width: 100%;
+  max-height: 400px;
+  height: 400px; */
+  margin: 4px 0px 4px 0px;
+  font-size: 28px;
+  /* line-height: 120%; */
+  pointer-events: none;
+}
+
+.blogImage {
+  width: 100%; 
+  height: auto; 
+}
+
+.blogCharacterImage {
+display: block;
+/*This will set the top space to 500px, the right to 0px the bottom to 0px and the left to 0px*/
+padding: 60px 0px 30px 0px;
+}
+
+.interestingLife {
+text-align: justify;
+text-align-last: center;
+}
+
+/* deldeldel below */
+
+.blogButtonHolder {
+  justify-content: center; 
+  max-width: 90%;
+  margin: auto;  
+}
+
+.blogRow {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 0 4px; */
+  justify-content: center; 
+}
+
+.blogColumn {
+    /* width each column takes up... */
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 4px;
+}
+
+/*Once the screen width is below 1600px, each column will be a bit bigger in row pairs*/
+/* @media (max-width: 1800px) {
+    .blogColumn {
+      flex: 20%;
+      max-width: 20%;
+    }
+} */
+  
+/*Once the screen width is below 1200px, each column will take up 100% of the width.*/
+/* @media (max-width: 1300px) {
+    .blogColumn {
+        flex: 49%;
+        max-width: 49%;
+    }
+} */
+
+/*Once the screen width is below 1200px, each column will take up 100% of the width.*/
+@media (max-width: 1000px) {
+  .blogColumn {
+      flex: 99%;
+      max-width: 99%;
+  }
+}
+
+
+.interestingLife > p {
+  /* background-color: #ffd110; */
+  padding : 0; 
+  margin : 0;
+}
+
+.blogPreviewContainer > p {
+  padding : 0; 
+  margin : 0;
 }
