@@ -1,0 +1,8 @@
+{
+    "description": "description of my first post :D",
+    "image": {
+      "src": "forestImages/1.png",
+      "alt": "firstpost alt text"
+    },
+    "drawingtitle": "myFirstPost"
+  }
