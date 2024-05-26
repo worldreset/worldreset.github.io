@@ -1,7 +1,7 @@
 {
     "description": "this is the second element.",
     "image": {
-      "src": "forestImages/1.png",
+      "src": "forestImages/2.png",
       "alt": "secondpost alt text"
     },
     "drawingtitle": "secondPost"
