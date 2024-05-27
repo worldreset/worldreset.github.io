@@ -26,7 +26,7 @@ document.addEventListener("click", async (event) => {
       displayContent(json);
       // Add a new entry to the history.
       // This simulates loading a new page.
-      history.pushState(json, "", dailypost);
+      history.pushState(json, "", "forest-town/" + dailypost);
     } catch (err) {
       console.error(err);
     }
