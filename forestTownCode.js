@@ -37,3 +37,27 @@ document.addEventListener("click", async (event) => {
     }
   }
 });
+
+
+
+
+
+
+
+document.addEventListener("loadeddata", async (event) => {
+  if (imageParameter) {
+    event.preventDefault();
+    try {
+      // When page is loaded, fetch the JSON associated with the query string, "p".
+      const response = await fetch(`forestImagesJSON/${imageParameter}.json`);
+
+      console.log(response);
+
+      const json = await response.json(); // continued from above
+      displayContent(json);
+      console.log(json);  
+    } catch (err) {
+      console.error(err);
+    }
+  }
+});
