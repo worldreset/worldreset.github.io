@@ -15,13 +15,33 @@ function displayContent(content) {
 }
 
 
-// When page is loaded, get p which is the query string. 
-const urlParams = new URLSearchParams(window.location.search);
-const imageParameter = urlParams.get('p');
-console.log(imageParameter);
-
-
 document.addEventListener("click", async (event) => {
+  if (imageParameter) {
+    event.preventDefault();
+    try {
+      // When page is loaded, fetch the JSON associated with the query string, "p".
+      const response = await fetch(`forestImagesJSON/${imageParameter}.json`);
+
+      console.log(response);
+
+      const json = await response.json(); // continued from above
+      displayContent(json);
+      console.log(json);  
+    } catch (err) {
+      console.error(err);
+    }
+  }
+});
+
+document.addEventListener("load", async (event) => {
+
+  
+  // When page is loaded, get p which is the query string. 
+  const urlParams = new URLSearchParams(window.location.search);
+  const imageParameter = urlParams.get('p');
+  console.log(imageParameter);
+
+
   if (imageParameter) {
     event.preventDefault();
     try {
