@@ -18,6 +18,7 @@ function displayContent(content) {
 const urlParams = new URLSearchParams(window.location.search);
 const imageParameter = urlParams.get('p');
 console.log(imageParameter);
+document.getElementById('forestBody').click();
 
 
 document.addEventListener("click", async (event) => {
