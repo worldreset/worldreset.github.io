@@ -1,0 +1,417 @@
+@font-face { font-family: forestFont; src: url('forestFont.ttf'); } 
+
+        
+
+
+
+
+
+
+/*Defines how the width and height of an element are calculated: should they include padding and borders, or not*/
+* {
+    box-sizing: border-box;
+  }
+
+/*all images are centered*/
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* all divs have coral borders. Backslash to comments*/
+/* div {
+    border-style: solid;
+    border-color: coral;
+} */
+
+.buttonHolder {
+    justify-content: center; 
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center; 
+}
+
+/*Normally, each of the two columns takes up 50% of the width.*/
+.column {
+    flex: 35%;
+    max-width: 35%;
+    padding: 0 4px;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/*Once the screen width is below 1600px, each column will be a bit bigger in row pairs*/
+@media (max-width: 1800px) {
+    .column {
+      flex: 40%;
+      max-width: 40%;
+    }
+}
+  
+/*Once the screen width is below 1200px, each column will take up 100% of the width.*/
+@media (max-width: 1200px) {
+    .column {
+        flex: 90%;
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+.coolBackground {
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*COLOREDBUTTONS */
+
+.coloredButton {
+  transition: all 0.1s ease; 
+}
+
+.coloredButton:hover { 
+  transform: scale(1.01); 
+}
+
+/*END OF COLORBUTTONS */
+
+
+
+
+
+
+
+
+
+
+/*ANIMATION*/
+
+.animation {
+  position: absolute;
+  left: 0;
+  right: 15%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  user-select: none;
+}
+
+/*END OF ANIMATION*/
+
+
+/* CLICKTOCONTINUE */
+
+.clickToContinue {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 500px; /* Need a specific value to work */
+  text-align: center;
+}
+
+/* END OF CLICKTOCONTINUE*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TITLE */
+
+.maxPanComImage {
+    display: block;
+    /*This will set the top space to 500px, the right to 0px the bottom to 0px and the left to 0px*/
+    padding: 60px 0px 30px 0px;
+    user-select: none;
+}
+
+.welcomeMessageImage {
+    display: block;
+    padding: 0px 0px 60px 0px;
+    user-select: none;
+}
+
+/*END OF TITLE*/
+
+/*BOTTOM BAR*/
+
+.bottomBar {
+    /*This will set the top space to 500px, the right to 0px the bottom to 0px and the left to 0px*/
+    padding: 150px 1px 0px 1px;
+}
+
+.floatLeftBottomBar {
+    float: left;
+    overflow: hidden;
+    line-height: 10pt;
+}
+
+.stayMidBottomBar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50px;
+    line-height: 10pt;
+}
+
+.floatRightBottomBar {
+    float: right;
+    overflow: hidden;
+    line-height: 10pt;
+}
+
+/*END OF BOTTOM BAR*/
+
+
+
+
+/* CANT BE SELECTED TEXT */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/* CANT BE SELECTED TEXT END */
+
+
+
+
+
+/*NAVBAR*/
+
+.navbar {
+    overflow: hidden;
+    background-color: #ffffff00;
+    font-family: forestFont;
+    padding: 15px 20px 0px 30px;
+  }
+  
+  .navbar a {
+    float: right;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+
+  .logo {
+    float: left;
+    overflow: hidden;
+    user-select: none;
+  }
+  
+  .dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 32px;  
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: rgb(197, 197, 197, 0.5);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff00;
+    min-width: 160px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(178, 178, 178, 0.2);
+  }
+  
+  .show {
+    display: block;
+  }
+
+  /*END OF NAVBAR*/
+
+
+
+
+
+  .pulsate {
+    animation: myPulse 1.5s ease 0s infinite normal forwards;
+  }
+  
+  @keyframes myPulse {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.06);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 1026px) {
+    #hideWhenSmall {
+        display: none;
+    }
+}
+
+/* BLOG */
+  
+.blogPreviewContainer {
+  background-color: white;
+  /* max-width: 100%;
+  max-height: 400px;
+  height: 400px; */
+  margin: 4px 0px 4px 0px;
+  font-size: 28px;
+  /* line-height: 120%; */
+  pointer-events: none;
+}
+
+.blogImage {
+  width: 100%; 
+  height: auto; 
+}
+
+.blogCharacterImage {
+display: block;
+/*This will set the top space to 500px, the right to 0px the bottom to 0px and the left to 0px*/
+padding: 60px 0px 30px 0px;
+}
+
+.interestingLife {
+text-align: justify;
+text-align-last: center;
+}
+
+/* deldeldel below */
+
+.blogButtonHolder {
+  justify-content: center; 
+  max-width: 90%;
+  margin: auto;  
+}
+
+.blogRow {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 0 4px; */
+  justify-content: center; 
+}
+
+.blogColumn {
+    /* width each column takes up... */
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 4px;
+}
+
+/*Once the screen width is below 1600px, each column will be a bit bigger in row pairs*/
+/* @media (max-width: 1800px) {
+    .blogColumn {
+      flex: 20%;
+      max-width: 20%;
+    }
+} */
+  
+/*Once the screen width is below 1200px, each column will take up 100% of the width.*/
+/* @media (max-width: 1300px) {
+    .blogColumn {
+        flex: 49%;
+        max-width: 49%;
+    }
+} */
+
+/*Once the screen width is below 1200px, each column will take up 100% of the width.*/
+@media (max-width: 1000px) {
+  .blogColumn {
+      flex: 99%;
+      max-width: 99%;
+  }
+}
+
+
+.interestingLife > p {
+  /* background-color: #ffd110; */
+  padding : 0; 
+  margin : 0;
+}
+
+.blogPreviewContainer > p {
+  padding : 0; 
+  margin : 0;
+}
