@@ -6,6 +6,195 @@
         <title>Blog</title>
         <link rel="stylesheet" href="style.css">
         <script src="taskbarCode.js"></script>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        /* body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f1f1f1;
+        } */
+
+        /* Header/Blog Title */
+        .header {
+        padding-right: 0px;
+        font-size: 50px;
+        text-align: center;
+        background: none;
+        background-image: none;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {   
+        float: left;
+        width: 37.25%;
+        padding-left: 30px;
+        padding-right: 20px;
+        margin: 0px;
+        }
+
+        .leftcolumnInBlog {   
+        float: left;
+        width: 50%;
+        padding-left: 30px;
+        padding-right: 20px;
+        margin: 0px;
+        }
+
+        /* Right column */
+        .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+        padding-right: 30px;
+        margin-top: 0px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+        background-color: white;
+        background-image: url("/mainImages/white.jpg");
+        background-size: 100%;
+        padding: 0px;
+        margin-bottom: 80px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        .imageRow {
+        content: "";
+        display: flex;
+        clear: both;
+        max-width: 100px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {   
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .header {   
+            width: 92%;
+        }
+        .leftcolumn {
+            width: 45%;
+        }
+        #hideWhenSmall {
+            display: none;
+        }
+        }
+
+
+        @media screen and (max-width: 1300px) {
+            .myinternetjournal {
+                width: 1200px;
+                margin-left: 20px;
+            }
+        }
+
+
+        @media screen and (min-width: 1300px) {
+            .myinternetjournal {
+                width: 97%;
+            }
+        }
+
+        
+
+
+        @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {   
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .header {   
+            width: 92%;
+        }
+        #hideWhenSmall {
+        display: none;
+        }
+        }
+
+
+
+
+
+
+
+         @media screen and (max-width: 1500px) {
+        .rightimage {
+            display:none;
+        }
+        }
+
+        @media screen and (max-width: 1000px) {
+        .middleimage {
+            display:none;
+        }
+        }
+
+
+        </style>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </head>
 
     <body class="coolBackground" background="mainImages\testBackground.png" style="font-family:forestFont" onload="getBlogPage('blogs/blogTemplate.html','allBlogContainers')">
@@ -29,11 +218,11 @@
             <a href="index.html">HOME</a>
 
             <div class="logo">
-                <img  draggable="false" src="mainImages/meowLogo.png" style="width:80px">
+                <img  draggable="false" src="mainImages/meowLogo.png" style="width:70px">
             </div>
 
             <div style="float:left">
-                <p><span style="font-size:32px">&#160;&#160;&#160;MAX PAN</span></p>
+                <p><span style="font-size:32px" id="hideWhenSmall">&#160;&#160;&#160;MAX PAN</span></p>
             </div>
         </div>
 
@@ -82,7 +271,9 @@
             let y = await x.text();
             document.getElementById(id).innerHTML = y;
             console.log(x)
+            document.documentElement.scrollTop = 0;
         }
+        
     </script>
 
 </html>
